@@ -26,6 +26,7 @@ Fixes inventory window saving to properly save positions of nested container win
     [*]Initial release
     [/list]
   </ChangeLog>
+  <WorkshopHandle>3462118387</WorkshopHandle>
   <!-- StationeersMods and BepInEx tags for Steam workshop page will be automatically added by the framework when publishing -->
   <Tags>
     <Tag>StationeersMods</Tag>
