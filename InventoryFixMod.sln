@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryFixMod", "InventoryFixMod.csproj", "{d511952c-4eec-4f61-9ba0-83b7798de9ad}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{d511952c-4eec-4f61-9ba0-83b7798de9ad}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{d511952c-4eec-4f61-9ba0-83b7798de9ad}.Release|Any CPU.Build.0 = Release|Any CPU
+		{d511952c-4eec-4f61-9ba0-83b7798de9ad}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d511952c-4eec-4f61-9ba0-83b7798de9ad}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
