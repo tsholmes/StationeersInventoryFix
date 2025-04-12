@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 namespace inventoryfixmod
 {
-  [StationeersMod("InventoryFixMod", "InventoryFixMod [StationeersMods]", "0.1.0")]
+  [StationeersMod("InventoryFixMod", "InventoryFixMod [StationeersMods]", "0.1.1")]
   class InventoryFixMod : ModBehaviour
   {
     public override void OnLoaded(ContentHandler contentHandler)
@@ -181,6 +181,16 @@ namespace inventoryfixmod
         Human.LocalHuman.SwapHands();
       InventoryWindowManager.WorldXmlUISaveData = null;
       return false;
+    }
+  }
+
+  [HarmonyPatch(typeof(InventoryWindow))]
+  static class InventoryWindowPatch
+  {
+    [HarmonyPatch(nameof(InventoryWindow.SetVisible)), HarmonyPostfix]
+    static void SetVisible(InventoryWindow __instance, bool isVisble)
+    {
+      __instance.RectTransform.gameObject.SetActive(isVisble);
     }
   }
 }
