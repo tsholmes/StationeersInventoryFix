@@ -1,6 +1,6 @@
 ﻿# Stationeers Inventory Window Fix
 
-![header image](Assets/About/Preview.png)
+![header image](About/Preview.png)
 
 This mod requires [StationeersMods](https://jixxed.github.io/StationeersMods/) to be installed in order to use.
 
