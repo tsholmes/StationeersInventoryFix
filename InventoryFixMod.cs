@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 namespace inventoryfixmod
 {
-  [StationeersMod("InventoryFixMod", "InventoryFixMod [StationeersMods]", "0.1.1")]
+  [StationeersMod("InventoryFixMod", "InventoryFixMod", "0.1.2")]
   class InventoryFixMod : ModBehaviour
   {
     public override void OnLoaded(ContentHandler contentHandler)
@@ -44,7 +44,7 @@ namespace inventoryfixmod
       var pathLen = 0;
 
       var slot = window.ParentSlot;
-      while (slot != null)
+      while (slot != null && slot.Get() != InventoryWindowManager.Instance.Parent)
       {
         // add 1 to slot index so we distinguish end of path from slot 0
         fullPath <<= 8;
@@ -98,7 +98,7 @@ namespace inventoryfixmod
       InventoryWindow curWindow = null;
       foreach (var slotIndex in path)
       {
-        if (slotIndex >= curThing?.Slots?.Count)
+        if (curThing == null || slotIndex >= curThing?.Slots?.Count)
         {
           // invalid index
           return null;
@@ -180,6 +180,16 @@ namespace inventoryfixmod
       if (InventoryWindowManager.ActiveHand.SlotIndex != userInterfaceSaveData.ActiveHandSlot)
         Human.LocalHuman.SwapHands();
       InventoryWindowManager.WorldXmlUISaveData = null;
+      return false;
+    }
+
+    [HarmonyPatch(nameof(InventoryWindowManager.ToggleWindows)), HarmonyPrefix]
+    static bool ToggleWindows(bool show, InventoryWindowManager __instance)
+    {
+      foreach (var window in __instance.Windows)
+      {
+        window.GameObject.SetActive(show && window.IsVisible);
+      }
       return false;
     }
   }

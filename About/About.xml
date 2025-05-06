@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name>Inventory Window Fix [StationeersMods]</Name>
+  <Name>Inventory Window Fix</Name>
   <Author>tom_is_unlucky</Author>
-  <Version>0.1.1</Version>
+  <Version>0.1.2</Version>
   <!-- Steam description using steam styling tags for Steam workshop page -->
   <Description>[h1]Inventory Window Fix[/h1]
-    [b]WARNING:[/b] This is a StationeersMods Plugin Mod. It requires Bepinex to be installed with the StationeersMods plugin.
-    See: https://jixxed.github.io/StationeersMods/
 
     Fixes inventory window saving to properly save positions of nested container windows.
     Also fixes the extra space between docked windows when closing a window in the middle.
+
+
+
+
+    This requires an installed mod loader to run. See: https://jixxed.github.io/StationeersMods/
   </Description>
   <!-- Ingame Description using TMP tags for Workshop menu -->
   <InGameDescription>
@@ -22,16 +25,14 @@ Fixes inventory window saving to properly save positions of nested container win
   </InGameDescription>
   <!-- All contents of ChangeLog should be changed for each publication for Steam workshop page -->
   <ChangeLog>
-    [h3]Version 0.1.1:[/h3]
+    [h3]Version 0.1.2:[/h3]
     [list]
-    [*]Fixed extra spacing after closing windows in docked view
+    [*] Fixed extra spacing between windows reappearing when waking up from unconsciousness.
+    [*] Fixed positions not being saved properly and sometimes causing error when saving while player is in a slot (seat/sleeper/cryo).
     [/list]
   </ChangeLog>
   <WorkshopHandle>3462118387</WorkshopHandle>
-  <!-- StationeersMods and BepInEx tags for Steam workshop page will be automatically added by the framework when publishing -->
-  <Tags>
-    <Tag>StationeersMods</Tag>
-  </Tags>
+  <Tags />
   <!-- Automatic downloads of dependencies -->
   <Dependencies />
   <!-- Automatic reordering of the mods list -->
