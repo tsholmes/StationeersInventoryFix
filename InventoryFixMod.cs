@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 namespace inventoryfixmod
 {
-  [StationeersMod("InventoryFixMod", "InventoryFixMod", "0.1.2")]
+  [StationeersMod("InventoryFixMod", "InventoryFixMod", "0.1.3")]
   class InventoryFixMod : ModBehaviour
   {
     public override void OnLoaded(ContentHandler contentHandler)
@@ -188,7 +188,9 @@ namespace inventoryfixmod
     {
       foreach (var window in __instance.Windows)
       {
-        window.GameObject.SetActive(show && window.IsVisible);
+        if (window == null)
+          continue;
+        window.GameObject?.SetActive(show && window.IsVisible);
       }
       return false;
     }

@@ -2,7 +2,7 @@
 <ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>Inventory Window Fix</Name>
   <Author>tom_is_unlucky</Author>
-  <Version>0.1.2</Version>
+  <Version>0.1.3</Version>
   <!-- Steam description using steam styling tags for Steam workshop page -->
   <Description>[h1]Inventory Window Fix[/h1]
 
@@ -25,10 +25,9 @@ Fixes inventory window saving to properly save positions of nested container win
   </InGameDescription>
   <!-- All contents of ChangeLog should be changed for each publication for Steam workshop page -->
   <ChangeLog>
-    [h3]Version 0.1.2:[/h3]
+    [h3]Version 0.1.3:[/h3]
     [list]
-    [*] Fixed extra spacing between windows reappearing when waking up from unconsciousness.
-    [*] Fixed positions not being saved properly and sometimes causing error when saving while player is in a slot (seat/sleeper/cryo).
+    [*] Fixed error on entering/leaving unconsciousness when window list has null entries.
     [/list]
   </ChangeLog>
   <WorkshopHandle>3462118387</WorkshopHandle>

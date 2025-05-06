@@ -2,6 +2,8 @@
 
 ![header image](About/Preview.png)
 
-This mod requires [StationeersMods](https://jixxed.github.io/StationeersMods/) to be installed in order to use.
-
 Fixes inventory window saving to properly save positions of nested container windows
+
+
+
+This requires an installed mod loader to run. See: https://jixxed.github.io/StationeersMods/
