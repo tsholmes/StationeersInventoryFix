@@ -10,9 +10,7 @@
     Also fixes the extra space between docked windows when closing a window in the middle.
 
 
-
-
-    This requires an installed mod loader to run. See: https://jixxed.github.io/StationeersMods/
+    This requires BepInEx and a modloader installed. Try out [url=https://github.com/StationeersLaunchPad/StationeersLaunchPad]StationeersLaunchPad[/url]. (also compatible with StationeersMods)
   </Description>
   <!-- Ingame Description using TMP tags for Workshop menu -->
   <InGameDescription>
