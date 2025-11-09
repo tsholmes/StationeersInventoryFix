@@ -61,7 +61,7 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="StationeersMods.Interface">
-            <HintPath>$(StationeersDirectory)\BepInEx\plugins\SMPreloader\StationeersMods.Interface.dll</HintPath>
+            <HintPath>$(StationeersDirectory)\BepInEx\plugins\StationeersLaunchPad\StationeersMods.Interface.dll</HintPath>
             <Private>False</Private>
         </Reference>
     </ItemGroup>
@@ -73,10 +73,9 @@
             <AboutItems Include="$(ProjectDir)\About\**\*.*">
                 <DestFolder>About\%(RecursiveDir)</DestFolder>
             </AboutItems>
-            <InfoFile Include="$(ProjectDir)\$(ModName).info" />
             <AssemblyFile Include="$(OutputPath)\$(ModName).dll" />
             <PdbFile Include="$(OutputPath)\$(ModName).pdb" Condition=" '$(Configuration)' == 'Debug' " />
-            <BaseAllCopyItems Include="@(GameDataItems);@(AboutItems);@(InfoFile);@(AssemblyFile);@(PdbFile)" />
+            <BaseAllCopyItems Include="@(GameDataItems);@(AboutItems);@(AssemblyFile);@(PdbFile)" />
             <AllCopyHasFolder Include="@(BaseAllCopyItems->HasMetadata('DestFolder'))" />
             <AllCopyNoFolder Include="@(BaseAllCopyItems)" Exclude="@(AllCopyHasFolder)">
               <DestFolder></DestFolder>
